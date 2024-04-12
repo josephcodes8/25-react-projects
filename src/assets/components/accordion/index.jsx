@@ -33,7 +33,7 @@ const Accordion = () => {
       <div className="accordion-container w-[100%] max-w-[500px]">
         <button
           onClick={toggleMultipleSelection}
-          className="py-3  px-6 bg-green-400 font-bold  text-white mb-4 rounded-full"
+          className="py-3  px-6 bg-slate-500 font-bold  text-white mb-4 rounded-full"
         >
           Enable Multi Selection
         </button>
@@ -41,7 +41,7 @@ const Accordion = () => {
           data.map(({ id, question, answer }) => (
             <div key={id} className="mb-4">
               <button
-                className="flex justify-between w-full p-4 bg-red-100 rounded-t-md"
+                className="flex justify-between w-full p-4 bg-slate-100 rounded-t-md"
                 onClick={
                   enableMultiSelection
                     ? () => handleMultiSelection(id)
@@ -58,7 +58,7 @@ const Accordion = () => {
                 </span>
               </button>
               <div
-                className={`bg-red-50 rounded-b-md opacity transition-all max-h-0 overflow-hidden ${
+                className={`bg-slate-50 rounded-b-md opacity transition-all max-h-0 overflow-hidden ${
                   enableMultiSelection
                     ? multiple.includes(id) && "max-h-full p-4"
                     : selected == id && "max-h-full p-4"
@@ -77,7 +77,7 @@ const Accordion = () => {
             </div>
           ))
         ) : (
-          <p>No Data is Available to be displayed!</p>
+          <p>No Data to be displayed!</p>
         )}
       </div>
     </div>

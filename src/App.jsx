@@ -1,8 +1,9 @@
-import Accordion from "./assets/components/accordion";
+import { Accordion, ColorGenerator } from "./assets/components";
 
 function App() {
   return (
-    <main className="h-[100vh]">
+    <main className="h-[100vh] w-screen overflow-x-hidden">
+      <ColorGenerator />
       <Accordion />
     </main>
   );
